@@ -7903,3 +7903,16 @@ fs.watchFile(file, () => {
    delete require.cache[file]
    require(file)
 })
+		    const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Endpoint untuk memastikan server aktif
+app.get("/", (req, res) => {
+  res.send("Bot WhatsApp sedang berjalan 24 jam!");
+});
+
+// Jalankan server HTTP
+app.listen(port, () => {
+  console.log(`Server berjalan di http://localhost:${port}`);
+});
